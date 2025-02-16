@@ -1,1 +1,1 @@
-/home/adhikari/Programming/lear/target/debug/lear: /home/adhikari/Programming/lear/src/main.rs
+/home/adhikari/Programming/rust_RAT/target/debug/lear: /home/adhikari/Programming/rust_RAT/src/main.rs
