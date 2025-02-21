@@ -1,4 +1,6 @@
 use std::process::{Command, Stdio};
+use std::io;
+use std::io::Write;
 
 fn execute_command(command: &str) -> String {
     let output = Command::new("sh")
@@ -19,7 +21,21 @@ fn execute_command(command: &str) -> String {
 }
 
 fn main() {
-    let command = "echo 'You have been hacked' > test.txt"; // Replace with any shell command
-    let result = execute_command(command);
-    println!("{}", result);
+
+    loop {
+        let mut command: String = String::new();
+        print!("> ");
+        io::stdout().flush().unwrap();
+
+        io::stdin().read_line(&mut command).expect("Failed to read line");
+
+        let command = command.trim(); // Remove trailing newline
+
+        if command == "alvida" {
+            break;
+        }
+
+        let result = execute_command(command); // Pass trimmed input
+        println!("{}", result);
+    }
 }
