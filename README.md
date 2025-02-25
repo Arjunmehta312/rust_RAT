@@ -20,7 +20,9 @@ This project consists of a **Remote Access Trojan (RAT)** and a **Command and Co
 │   ├── src
 │   │   ├── main.rs   # C2 Server implementation
 │   ├── Cargo.toml    # Rust dependencies
-│
+|
+|── LICENSE           # MIT License
+|
 └── .gitignore        # Ignores all files except main.rs in RAT & C2C
 ```
 
